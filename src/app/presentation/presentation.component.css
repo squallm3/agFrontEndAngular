@@ -1,0 +1,18 @@
+#profilePic {
+    height: 150px;
+    width: 150px;
+}
+
+#presentation {
+    height: 242px;
+    background-color: #DEFFFB;
+}
+
+.namePosition {
+    height: 242px;
+    background-color: #82D8CE;
+}
+
+#introduction  {
+    height: 242px;
+}

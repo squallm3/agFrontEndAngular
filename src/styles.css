@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.sectionTitle {
+    height: 88px;
+}
+
+.logos {
+    height: 200px;
+    width: 200px;
+    padding: 0;
+}
+
+.logos100 {
+    height: 100px;
+    width: 100px;
+    padding: 0;
+}
