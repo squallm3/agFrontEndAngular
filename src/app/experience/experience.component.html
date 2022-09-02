@@ -6,28 +6,23 @@
 
 
 <!-- Import Pro -->
-<div class="row">
+<div class="row" *ngFor="let workplace of workPlacesArr">
     <div class="col-4">
         <div class="row d-flex justify-content-center">
-            <img src="assets/logo_import_pro.png" alt="logo import pro" class="logos h-50 w-50">
+            <img [src]="workplace.imagePath" alt="logo import pro" class="logos h-50 w-50">
         </div>
         <div class="row workplacesTitles d-flex justify-content-center align-items-center">
             <!-- <h2 class="text-center">{{ importPro.title }}</h2> -->
-            <h2 class="text-center">{{ importProPrueba.positions }}</h2>
+            <h2 class="text-center">{{ workplace.name }}</h2>
         </div>
     </div>
     <div class="col">
-        <div class="row" *ngFor="let str of importPro.position1; index as i" [ngClass]="{lightLetter: i >= 2}"><h6>{{ str }}</h6></div>
-        <br>
-        <!-- Position 2 -->
-        <div class="row" *ngFor="let str of importPro.position2; index as i" [ngClass]="{lightLetter: i >= 2}"><h6>{{ str }}</h6></div>
-        <br>
-        <!-- Position 3 -->
-        <div class="row" *ngFor="let str of importPro.position3; index as i" [ngClass]="{lightLetter: i >= 2}"><h6>{{ str }}</h6></div>
+        <div class="row" *ngFor="let str of workplace.positions; index as i" [ngClass]="{lightLetter: i >= 2}"><h6>{{ str }}</h6></div>
         <br>
     </div>
 </div>
 <br>
+
 <!-- Acumar -->
 <div class="row">
     <div class="col-4">
@@ -48,7 +43,7 @@
                 <li>Supervisión de tickets.</li>
                 <li>Soporte técnico nivel 3.</li>
                 <li>Gestión de compras.</li>
-                <li>Despliegue y gestión de servicios: WSUS, WDS, SCCM, Software Repository,OTRS, Invgate, Telefonía Fija y Celular.</li>
+                <li>Despliegue y gestión de servicios: WSUS, WDS, SCCM, Software Repository, OTRS, Invgate, Telefonía Fija y Celular.</li>
                 <li>Migración de Sistemas Operativos Windows 10.</li>
             </ul>
         </div>

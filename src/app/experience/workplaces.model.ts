@@ -1,17 +1,13 @@
 export class WorkPlaces {
-    name: string;
-    date: string;
-    positions: string[] = [];
+    public positions: Position[];
 
-    constructor(name: string, date: string, ...pos: string[]) {
-        this.name = name;
-        this.date = date;
-        this.positions = pos;
+    constructor(public imagePath:string, public name: string, ...positions: Position[]) {
+        this.positions = positions;
     }
 }
 
-// class Positions {
-//     name: string;
-//     date: string;
 
-// }
+export class Position {
+    constructor(public positionName: string, public date:string, public taskList: string[]) {
+    }
+}
