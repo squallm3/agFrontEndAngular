@@ -1,4 +1,4 @@
-<div class="row sectionTitle">
+<div class="row">
     <div class="col d-flex align-items-center">
         <h2>Experiencia</h2>
     </div>
@@ -6,20 +6,43 @@
 
 
 <!-- Import Pro -->
-<div class="row" *ngFor="let workplace of workPlacesArr">
+<div class="row">
     <div class="col-4">
         <div class="row d-flex justify-content-center">
-            <img [src]="workplace.imagePath" alt="logo import pro" class="logos h-50 w-50">
+            <img [src]="importPro.imagePath" alt="logo import pro" class="logos h-50 w-50">
         </div>
         <div class="row workplacesTitles d-flex justify-content-center align-items-center">
             <!-- <h2 class="text-center">{{ importPro.title }}</h2> -->
-            <h2 class="text-center">{{ workplace.name }}</h2>
+            <h2 class="text-center">{{ importPro.name }}</h2>
         </div>
     </div>
     <div class="col">
-        <div class="row" *ngFor="let str of workplace.positions; index as i" [ngClass]="{lightLetter: i >= 2}"><h6>{{ str }}</h6></div>
-        <br>
+        <!-- Position 1 -->
+        <div class="row"><h6>{{ importPro.rol1.title }}</h6></div>
+        <div class="row"><h6>{{ importPro.rol1.date }}</h6></div>
+        <div class="row">
+            <ul>
+                <li>{{ importPro.rol1.tasks[0] }}</li> 
+            </ul>
+        </div>
+        <!-- Position 2 -->
+        <div class="row"><h6>{{ importPro.rol2.title }}</h6></div>
+        <div class="row"><h6>{{ importPro.rol2.date }}</h6></div>
+        <div class="row">
+            <ul>
+                <li>{{ importPro.rol2.tasks[0] }}</li> 
+            </ul>
+        </div>
+        <!-- Position 3 -->
+        <div class="row"><h6>{{ importPro.rol3.title }}</h6></div>
+        <div class="row"><h6>{{ importPro.rol3.date }}</h6></div>
+        <div class="row">
+            <ul>
+                <li>{{ importPro.rol3.tasks[0] }}</li> 
+            </ul>
+        </div>
     </div>
+    <br>
 </div>
 <br>
 
@@ -27,47 +50,37 @@
 <div class="row">
     <div class="col-4">
         <div class="row d-flex justify-content-center">
-            <img src="assets/logo_acumar.png" alt="logo import pro" class="logos h-50 w-50">
+            <img [src]="acumar.imagePath" alt="logo import pro" class="logos h-50 w-50">
         </div>
         <div class="row workplacesTitles d-flex justify-content-center align-items-center">
-            <h2 class="text-center">Acumar</h2>
+            <h2 class="text-center">{{ acumar.name }}</h2>
         </div>
     </div>
     <div class="col">
         <!-- Position 1 -->
-        <div class="row"><h6>Team Leader de Centro de Atención a Usuarios</h6></div>
-        <div class="row"><h6>Julio 2012 - Junio 2021</h6></div>
+        <div class="row"><h6>{{ acumar.rol1.title }}</h6></div>
+        <div class="row"><h6>{{ acumar.rol1.date }}</h6></div>
         <div class="row">
             <ul>
-                <li>Coordinación de equipos: soporte telefónico, visitas on-site e inventario.</li> 
-                <li>Supervisión de tickets.</li>
-                <li>Soporte técnico nivel 3.</li>
-                <li>Gestión de compras.</li>
-                <li>Despliegue y gestión de servicios: WSUS, WDS, SCCM, Software Repository, OTRS, Invgate, Telefonía Fija y Celular.</li>
-                <li>Migración de Sistemas Operativos Windows 10.</li>
+                <li *ngFor="let task of acumar.rol1.tasks">{{ task }}</li> 
             </ul>
         </div>
         <br>
         <!-- Position 2 -->
-        <div class="row"><h6>Análisis e Implementación de Procesos Internos</h6></div>
-        <div class="row"><h6>Enero 2019 - Junio 2021</h6></div>
+        <div class="row"><h6>{{ acumar.rol2.title }}</h6></div>
+        <div class="row"><h6>{{ acumar.rol2.date }}</h6></div>
         <div class="row">
             <ul>
-                <li>Relevamiento de procesos internos de la Coordinación de Informática.</li>
-                <li>Propuestas de mejoras y automatización.</li>
-                <li>Implementación en herramienta de tickets / procesos (Invgate).</li>
+                <li *ngFor="let task of acumar.rol2.tasks">{{ task }}</li> 
             </ul>
         </div>
         <br>
         <!-- Position 3 -->
-        <div class="row"><h6>Agente de Soporte Técnico</h6></div>
-        <div class="row"><h6>Julio 2010 - Junio 2012</h6></div>
+        <div class="row"><h6>{{ acumar.rol3.title }}</h6></div>
+        <div class="row"><h6>{{ acumar.rol2.date }}</h6></div>
         <div class="row">
             <ul>
-                <li>Soporte técnico a usuarios de manera telefónica y presencial.</li>
-                <li>Instalación de sistemas operativos y software.</li>
-                <li>Creación y mantenimiento de imágenes de Sistemas Operativos.</li>
-                <li>Tareas de infraestructura de red.</li>
+                <li *ngFor="let task of acumar.rol3.tasks">{{ task }}</li> 
             </ul>
         </div>
         <br>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { workPlacesArr } from './workplacesmockup';
+import { importPro, acumar } from './workplacesmockup';
 
 @Component({
   selector: 'app-experience',
@@ -8,7 +8,8 @@ import { workPlacesArr } from './workplacesmockup';
 })
 export class ExperienceComponent implements OnInit {
 
-  workPlacesArr = workPlacesArr;
+  importPro = importPro;
+  acumar = acumar;
 
   constructor() { }
 
