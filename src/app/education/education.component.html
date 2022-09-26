@@ -20,3 +20,110 @@
         <br>
     </div>
 </div>
+
+<!-- Certifications and Courses -->
+<div class="row sectionTitle">
+    <div class="col d-flex align-items-center">
+        <h2 class="fw-light">Certificaciones</h2>
+    </div>
+    <div class="col d-flex align-items-center">
+        <h2 class="fw-light">Cursos</h2>
+    </div>
+</div>
+<div class="row">
+    <!-- Microsoft -->
+    <div class="col-2">
+        <div class="row d-flex justify-content-center">
+            <img [src]="microsoft.imagePath" alt="logo logo_microsoft" class="h-50 w-50">
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <h6>{{microsoft.title}}</h6>
+            <ul>
+                <li *ngFor="let certification of microsoft.certifications">{{certification}}</li> 
+            </ul>
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="row d-flex justify-content-center">
+            <img [src]="coursera.imagePath" alt="logo logo coursera" class="h-50 w-50">
+        </div>  
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <h6>Coursera:</h6>
+            <ul>
+                <li *ngFor="let certification of coursera.certifications">{{certification}}</li> 
+            </ul>
+    </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Duolingo -->
+    <div class="col-2">
+        <div class="row d-flex justify-content-center">
+            <img [src]="duolingo.imagePath" alt="logo duolingo" class="h-50 w-50">
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <h6>{{ duolingo.title }}</h6>
+            <ul>
+                <li *ngFor="let certification of duolingo.certifications">{{certification}}</li> 
+            </ul>
+        </div>
+    </div>
+    <!-- EDX -->
+    <div class="col-2">
+        <div class="row d-flex justify-content-center">
+            <img [src]="edx.imagePath" alt="logo edx" class="h-50 w-50">
+        </div>  
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <h6>{{edx.title}}</h6>
+            <ul>
+                <li *ngFor="let certification of edx.certifications">{{certification}}</li> 
+            </ul>
+    </div>
+    </div>
+</div>
+<div class="row">
+<!-- Placeholder     -->
+    <div class="col-2"></div>
+    <div class="col-4"></div>
+    <!-- INAP -->
+    <div class="col-2">
+        <div class="row d-flex justify-content-center">
+            <img [src]="inap.imagePath" alt="logo inap" class="h-50 w-50">
+        </div>  
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <h6>{{inap.title}}</h6>
+            <ul>
+                <li *ngFor="let certification of inap.certifications">{{certification}}</li> 
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Placeholder     -->
+    <div class="col-2"></div>
+    <div class="col-4"></div>
+    <!-- Proydesa -->
+    <div class="col-2">
+        <div class="row d-flex justify-content-center">
+            <img [src]="proydesa.imagePath" alt="logo proydesa" class="h-50 w-50">
+        </div>  
+    </div>
+    <div class="col-4">
+        <div class="row">
+            <h6>{{ proydesa.title }}</h6>
+            <ul>
+                <li *ngFor="let certification of proydesa.certifications">{{certification}}</li> 
+            </ul>
+        </div>
+    </div>
+</div>

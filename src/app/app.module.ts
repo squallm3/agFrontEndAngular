@@ -16,7 +16,7 @@ import { EducationComponent } from './education/education.component';
     BannerComponent,
     PresentationComponent,
     ExperienceComponent,
-    EducationComponent
+    EducationComponent,
   ],
   imports: [
     BrowserModule,
