@@ -1,0 +1,145 @@
+<!-- Fifth Section: Projects -->
+<div class="row sectionTitle">
+    <div class="col d-flex align-items-center">
+        <h2>Proyectos</h2>
+    </div>
+</div>
+
+<div class="accordion" id="accordionProyects">
+    <div class="accordion-item" *ngFor="let project of projects ; let i = index">
+        <h2 class="accordion-header" [id]="'heading' + i">
+        <button class="accordion-button accordionHeaders" [ngClass]="{'collapsed': i != 0 }" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+ i" aria-expanded="true" [attr.aria-controls]="'collapse'+ i">
+            {{ project.name }}
+        </button>
+        </h2>
+        <div [id]="'collapse'+ i" class="accordion-collapse collapse" [ngClass]="{ 'show': i == 0 }" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="row">
+                <div class="col-2">
+                    <img [src]="project.logoPath" alt="logo argentina programa">
+                </div>
+                <div class="col-10">
+                    <p>{{ project.description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <h6 class="text-center"><a href="">{{ project.link }}</a></h6>
+            </div>
+
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner mx-auto">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                    <img [src]="project.imagePath1" class="d-block w-100 imageCarr" alt="imagen 1 proyecto argentina programa">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img [src]="project.imagePath2" class="d-block w-100 imageCarr" alt="imagen 2 proyecto argentina programa">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img [src]="project.imagePath3" class="d-block w-100 imageCarr" alt="imagen 3 proyecto argentina programa">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+
+        </div>
+        </div>
+    <!-- </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed accordionHeaders" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            {{ proyects[1].name }}
+        </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse accordionHeaders" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="row">
+                <div class="col-2">
+                    <img [src]="proyects[1].logoPath" alt="logo argentina programa">
+                </div>
+                <div class="col-10">
+                    <p>{{ proyects[1].description }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <h6 class="text-center"><a href="">https://www.pepe.com</a></h6>
+            </div>
+
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner mx-auto">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./resources/img/argentinaProgCv1.png" class="d-block w-100 imageCarr" alt="imagen 1 proyecto argentina programa">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./resources/img/argentinaProgCv2.png" class="d-block w-100 imageCarr" alt="imagen 2 proyecto argentina programa">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./resources/img/argentinaProgCv3.png" class="d-block w-100 imageCarr" alt="imagen 3 proyecto argentina programa">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed accordionHeaders" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            {{ proyects[2].name }}
+        </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse accordionHeaders" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+
+            <div class="row">
+                <div class="col-2">
+                    <img [src]="proyects[2].logoPath" alt="logo argentina programa" class="logos100">
+                </div>
+                <div class="col-10">
+                    <p>{{ proyects[2].description }}</p>
+                </div>
+            </div>  
+            <div class="row">
+                <h6 class="text-center"><a href="">https://www.pepe.com</a></h6>
+            </div>
+
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner mx-auto">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./resources/img/argentinaProgCv1.png" class="d-block w-100 imageCarr" alt="imagen 1 proyecto argentina programa">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./resources/img/argentinaProgCv2.png" class="d-block w-100 imageCarr" alt="imagen 2 proyecto argentina programa">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./resources/img/argentinaProgCv3.png" class="d-block w-100 imageCarr" alt="imagen 3 proyecto argentina programa">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+
+
+        </div>
+        </div>
+    </div> -->
+</div>

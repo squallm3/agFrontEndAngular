@@ -1,0 +1,20 @@
+<!-- Fourth Section: Hard & Soft Skills -->
+<div class="row sectionTitle">
+    <div class="col d-flex align-items-center">
+        <h2>Hard & Soft Skills</h2>
+    </div>
+</div>
+
+<!-- First Row -->
+<div class="row percenteageRow">
+    <!-- English -->
+    <div class="col-3" *ngFor="let skill of skills | keyvalue: sortNull">
+        <div class="row d-flex align-items-center justify-content-center" style="margin-top: 25px;">
+            <img [src]="skill.value === 75 ? 'assets/percenteage_75.png' :'assets/percenteage_100.png'" alt="{{skill.key}} {{skill.value}}" class="h-50 w-50">
+        </div>
+        <div class="row d-flex align-items-center justify-content-center percenteageTitles" style="margin-bottom: 50px;">
+            <h4 class="fw-light text-center">{{skill.key}}</h4>
+        </div>
+    </div>
+
+</div>

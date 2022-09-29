@@ -1,4 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+/* First Page: NavBar, Banner and Presentation */
+
+header {
+    height: 88px;
+}
+
+#argentinaProgramaLogo {
+    margin-bottom: 0;
+}
+
+#profilePic {
+    height: 150px;
+    width: 150px;
+}
+
+#presentation {
+    height: 242px;
+    background-color: #DEFFFB;
+}
+
+.namePosition {
+    height: 242px;
+    background-color: #82D8CE;
+}
+
+#introduction  {
+    height: 242px;
+}
+
+/* Second Page: Experience */
+
+#experience {
+    background-color: #DEFFFB;
+}
+
+
 .sectionTitle {
     height: 88px;
 }
@@ -9,8 +44,38 @@
     padding: 0;
 }
 
+.workplacesTitles {
+    height: 80px;
+}
+
+/* Third Section: Education */
+
 .logos100 {
     height: 100px;
     width: 100px;
     padding: 0;
 }
+
+/* Fourth Section: Hard & Soft Skills */
+
+.percenteageRow {
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+.percenteageTitles {
+    margin-top: 15px;
+}
+
+.accordionHeaders {
+    background-color: 9DE3F6;
+}
+
+.imageCarr {
+    width: 100%;
+}
+
+.carousel-inner{
+    width: 75%;
+    max-height: 500px !important;
+  }
